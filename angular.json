@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularCalculator": {
+    "CurrencyConverter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularCalculator",
+            "outputPath": "dist/CurrencyConverter",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularCalculator:build:production"
+              "browserTarget": "CurrencyConverter:build:production"
             },
             "development": {
-              "browserTarget": "AngularCalculator:build:development"
+              "browserTarget": "CurrencyConverter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularCalculator:build"
+            "browserTarget": "CurrencyConverter:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "AngularCalculator"
+  "defaultProject": "CurrencyConverter"
 }

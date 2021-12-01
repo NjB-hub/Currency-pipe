@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConvertPipe } from './convert.pipe';
+import { ConverterPipe } from './converter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConverterPipe,
+    ConvertPipe
   ],
   imports: [
     BrowserModule,
