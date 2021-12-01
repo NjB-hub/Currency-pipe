@@ -18,18 +18,18 @@ export class ConverterPipe implements PipeTransform {
 }
 
 transform(value: any, args?: any): any {
-  // Get rates Object from rates.ts
+  // Récupération des taux dans rates.js
   this.rates = new Rates().rates;
-  // Get all the keys i.e the currency names
+  // Récuération de la monnaie courante
   this.rateArray = Object.keys(this.rates);
-  // Search the index of the selected currency name in array
+  // Recherche de l'index de la monnaie choisie dans le rates!;js
   this.index = this.rateArray.indexOf(args);
-  // Get the value of the selected currency i.e rate of selected currency from the object
+  // Récupération de la valeur de la devise 
   this.selected = this.rates[Object.keys(this.rates)[this.index]];
 
   for (const i in this.rates) {
     if (this.rates.hasOwnProperty(i)) {
-      // Apply the formula ( Rate of (currency in which we need to convert) / Rate of selected currency ) * number of units
+      //Formule ( Rate of (currency in which we need to convert) / Rate of selected currency ) * number of units
       this.rates[i] = ((this.rates[i] / this.selected) * value).toFixed(2);
     }
 
