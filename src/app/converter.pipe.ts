@@ -6,7 +6,7 @@ import { Rates } from './rates';
   name: 'convert'
 })
 export class ConverterPipe implements PipeTransform {
-  rates: any;
+  rates: object | any;
   rateArray: Array<string>;
   index: number;
   selected: number;

@@ -21,7 +21,7 @@ export class AppComponent {
    this.currencyVal = {};
   }
 
-  convert(val: any, unit: any) {
+  convert(val: string, unit: string) {
      this.currencyVal = this.converterpipe.transform(val, unit);
   }
 
